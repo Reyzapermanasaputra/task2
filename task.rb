@@ -9,8 +9,8 @@ class Player
   
   def self.play
     @players = []
-    @i = 0
-    while @i < 10
+    i = 0
+    while i < 10
       welcome = <<-STR
     # ============================== #
     # Welcome to the Battle Arena #
@@ -30,7 +30,7 @@ class Player
     else
       10.times { puts "\t you maybe wrong type" }
     end
-    @i += 1
+    i += 1
     end 
   end
   
@@ -67,8 +67,9 @@ class Player
       Player.attacked
       puts "=" * 10
     else
-      10.times {puts "The player is not found"}
+      10.times {puts "The player is not found or please create new player"}
     end
+    loop += 1
     end
   end
   
